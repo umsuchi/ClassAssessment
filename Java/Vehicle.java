@@ -25,5 +25,6 @@ class Car extends Vehicle {
         c1.display();
         c1 = new Car();
         Vehicle v1 = new Vehicle(" Blue");
+        v1.display();
     }
 }
