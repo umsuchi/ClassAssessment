@@ -1,9 +1,15 @@
 package ClassAssessment.Java;
 import java.util.*;
 class AreaCalculator{
-    double calculateArea(double radius){return (Math.PI * radius * radius);}
-    double calculateArea(double length , double width){return (length * width);}
-    int calculateArea(int side){return (side * side);}
+    double calculateArea(double radius){
+        return (Math.PI * radius * radius);
+    }
+    double calculateArea(double length , double width){
+        return (length * width);
+    }
+    int calculateArea(int side){
+        return (side * side);
+    }
     public static void main(String [] args){
         Scanner o = new Scanner(System.in);
         System.out.println("Radius ,, Length ,, Width ,, Side");
