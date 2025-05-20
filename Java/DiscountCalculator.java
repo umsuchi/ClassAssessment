@@ -1,8 +1,12 @@
 package ClassAssessment.Java;
 import java.util.*;
 class DiscountCalculator {
-    double calculateDiscount(double price , double disPer){return (price * disPer);}
-    int calculateDiscount(int price , int disPer){return (price * disPer) / 100 ;}
+    double calculateDiscount(double price , double disPer){
+        return (price * disPer);
+    }
+    int calculateDiscount(int price , int disPer){
+        return (price * disPer) / 100 ;
+    }
     public static void main(String[] args) {
         Scanner o = new Scanner(System.in);
         DiscountCalculator obj = new DiscountCalculator();
