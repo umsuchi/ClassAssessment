@@ -28,6 +28,6 @@ class House{
         obj.setarea(area);
         System.out.print("Enter Price per square meter : ");
         double price = o.nextDouble();
-        System.out.println("Address : "+obj.getaddress()+"\nNO of Rooms : "+obj.getnoofRooms()+"\nArea : "+obj.getarea()+"\nPrice of the House : "+obj.calculatePrice(price));
+        System.out.println("Address : "+obj.getaddress()+"\nNo of Rooms : "+obj.getnoofRooms()+"\nArea : "+obj.getarea()+"\nPrice of the House : "+obj.calculatePrice(price));
     }
 }
