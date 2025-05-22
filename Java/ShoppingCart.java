@@ -4,7 +4,9 @@ public class ShoppingCart {
     double calculateTotal(double price1 , int quan1 , double price2 , int quan2){
         return ((price1*quan1) + (price2*quan2));
     }
-    double calculateTotal(double price , int quan){return (price*quan);}
+    double calculateTotal(double price , int quan){
+        return (price*quan);
+    }
     public static void main(String[] args) {
         Scanner o = new Scanner(System.in);
         ShoppingCart obj = new ShoppingCart();
