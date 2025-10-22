@@ -17,18 +17,25 @@ public class Book {
     }
     public static void main(String[] args) {
         Book obj = new Book();
-        Scanner o = new Scanner(System.in);
-        System.out.print("Enter Book name : ");
-        String name = o.nextLine();
-        obj.settitle(name);
-        System.out.print("Enter Author name : ");
-        String writer = o.nextLine();
-        obj.setauthor(writer);
-        System.out.print("Enter Price : ");
-        double price = o.nextDouble();
-        obj.setprice(price);
-        System.out.print("Enter the percentage of Discount : ");
-        double dis = o.nextDouble();
-        System.out.println("Book name : "+obj.gettitle()+"\nAuthor : "+obj.getauthor()+"\nPrice : "+obj.getprice()+"\nAfter calculatin Discount Price : "+obj.applyDiscount(dis));
+        try (Scanner o = new Scanner(System.in)){
+            System.out.print("Enter Book name : ");
+            String name = o.nextLine();
+            obj.settitle(name);
+            
+            System.out.print("Enter Author name : ");
+            String writer = o.nextLine();
+            obj.setauthor(writer);
+            
+            System.out.print("Enter Price : ");
+            double price = o.nextDouble();
+            obj.setprice(price);
+            
+            System.out.print("Enter the percentage of Discount : ");
+            double dis = o.nextDouble();
+            System.out.println("Book name : "+obj.gettitle()+"\nAuthor : "
+            +obj.getauthor()+"\nPrice : "+obj.getprice()+"\nAfter calculatin Discount Price : "
+            +obj.applyDiscount(dis));
+        }
+        
     }
 }
