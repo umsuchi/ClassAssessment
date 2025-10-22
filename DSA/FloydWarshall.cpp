@@ -1,7 +1,8 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void printMatrix(int n, int W[10][10]) {
+void printMatrix(int n, vector<vector<int>> &W) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             cout << W[i][j] << " ";
@@ -10,8 +11,8 @@ void printMatrix(int n, int W[10][10]) {
     }
 }
 
-void warshall(int n, int M[10][10]) {
-    int W[10][10];
+void warshall(int n, vector<vector<int>> &M) {
+    vector<vector<int>> W(n, vector<int>(n, 0));
     
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
@@ -25,24 +26,20 @@ void warshall(int n, int M[10][10]) {
         }
     }
 
-    cout << "\nTransitive Closure of the given graph:\n";
+    cout << "Transitive Closure of the given graph:" << endl;
     printMatrix(n, W);
 }
 
 int main() {
     int n;
-
     cout << "Enter number of vertices: ";
     cin >> n;
+    vector<vector<int>> M(n, vector<int>(n, 0));
 
-    int M[10][10];
-
-    cout << "Enter adjacency matrix (" << n << "x" << n << "):\n";
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
+    cout << "Enter adjacency matrix (" << n << "x" << n << "):" << endl;
+    for (int i = 0; i < n; i++) 
+        for (int j = 0; j < n; j++) 
             cin >> M[i][j];
-        }
-    }
 
     warshall(n, M);
 
