@@ -17,19 +17,23 @@ class Desktop {
     }
     public static void main(String[] args) {
         Desktop obj = new Desktop();
-        Scanner o = new Scanner(System.in);
-        System.out.print("Enter the brand name : ");
-        String b = o.nextLine();
-        obj.setbrand(b);
-        System.out.print("Enter the processor name : ");
-        String pro = o.nextLine();
-        obj.setprocessor(pro);
-        System.out.print("Enter ram size : ");
-        int r = o.nextInt();
-        obj.setramSize(r);
-        System.out.print("Enter additional ram size : ");
-        int ram = o.nextInt();
-        System.out.println("Brand : "+obj.getbrand()+"\nProcessor : "+obj.getprocessor()+"\nRam : "+obj.getramSize()+"\nAfter adding ram : "+obj.upgradeRam(ram));    
+        try (Scanner o = new Scanner(System.in)){
+            System.out.print("Enter the brand name : ");
+            String b = o.nextLine();
+            obj.setbrand(b);
+            System.out.print("Enter the processor name : ");
+            String pro = o.nextLine();
+            obj.setprocessor(pro);
+            System.out.print("Enter ram size : ");
+            int r = o.nextInt();
+            obj.setramSize(r);
+            System.out.print("Enter additional ram size : ");
+            int ram = o.nextInt();
+            System.out.println("Brand : "+obj.getbrand()+"\nProcessor : "
+                                +obj.getprocessor()+"\nRam : "
+                                +obj.getramSize()+"\nAfter adding ram : "
+                                +obj.upgradeRam(ram));   
+        }
     }
     
 }
