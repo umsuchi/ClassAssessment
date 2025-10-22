@@ -16,18 +16,23 @@ class House{
     }
     public static void main(String[] args) {
         House obj = new House();
-        Scanner o = new Scanner(System.in);
-        System.out.print("Enter Address : ");
-        String add = o.nextLine();
-        obj.setaddress(add);
-        System.out.print("Enter NO of Rooms : ");
-        int room = o.nextInt();
-        obj.setnumofRooms(room);
-        System.out.print("Measurement of Area : ");
-        double area = o.nextDouble();
-        obj.setarea(area);
-        System.out.print("Enter Price per square meter : ");
-        double price = o.nextDouble();
-        System.out.println("Address : "+obj.getaddress()+"\nNO of Rooms : "+obj.getnoofRooms()+"\nArea : "+obj.getarea()+"\nPrice of the House : "+obj.calculatePrice(price));
+        try (Scanner o = new Scanner(System.in)){
+            System.out.print("Enter Address : ");
+            String add = o.nextLine();
+            obj.setaddress(add);
+            
+            System.out.print("Enter NO of Rooms : ");
+            int room = o.nextInt();
+            obj.setnumofRooms(room);
+            
+            System.out.print("Measurement of Area : ");
+            double area = o.nextDouble();
+            obj.setarea(area);
+            
+            System.out.print("Enter Price per square meter : ");
+            double price = o.nextDouble();
+            System.out.println("Address : "+obj.getaddress()+"\nNO of Rooms : "+obj.getnoofRooms()+"\nArea : "+obj.getarea()+"\nPrice of the House : "+obj.calculatePrice(price));
+    
+        }
     }
 }
