@@ -8,9 +8,9 @@ main proc
     mov bl, al
     
     mov ah,2
-    mov ah,10
+    mov dl,10
     int 21h
-    mov ah,13
+    mov dl,13
     int 21h
     
     mov ah, 2
@@ -22,9 +22,9 @@ main proc
     mov bh, al
     
     mov ah,2
-    mov ah,10
+    mov dl,10
     int 21h
-    mov ah,13
+    mov dl,13
     int 21h
     
     mov ah, 2
