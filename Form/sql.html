@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="dbms.php" method="POST">
+    <h2>Patient Information</h2>
+    
+    <div>Name: <input type="text" id="name" name="name"></div>
+    <div>Serial No: <input type="text" id="serial_no" name="serial_no"></div>
+    <div>Age: <input type="number" id="age" name="age"></div>
+    <div>
+        Gender: 
+        <input type="checkbox" id="gender"name="gender">
+        <label for="male">Male</label>
+        <input type="checkbox" id="gender" name="gender">
+        <label for="female">Female</label>
+        <input type="checkbox" id="gender" name="gender">
+        <label for="other">Other</label>      
+    </div>
+    <div>Contact: <input type="text" id="contact" name="contact"></div>
+    <div><button type="submit">Submit</button></div>
+    </form>
+</body>
+</html>
