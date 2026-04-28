@@ -1,7 +1,6 @@
 .model small
 .stack 100h
 .data
-
 a db "Even$"
 b db "Odd$"
 .code
